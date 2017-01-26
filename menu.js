@@ -10,7 +10,7 @@ const template = [
 				label: 'New File',
 				accelerator: 'CmdOrCtrl+N',
 				click () {
-					createWindow({url: `file://${path.join(__dirname, 'index.html?target=https://hackmd.io/new')}`});
+					createWindow({url: `file://${path.join(__dirname, 'index.html?target=http://materials.ironhack.com/new')}`});
 				}
 			},
 			{
@@ -90,7 +90,7 @@ const template = [
     submenu: [
       {
         label: 'Learn More',
-        click () { require('electron').shell.openExternal('https://hackmd.io') }
+        click () { require('electron').shell.openExternal('http://materials.ironhack.com') }
       }
     ]
   }

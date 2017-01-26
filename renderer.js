@@ -5,7 +5,7 @@ const {ipcRenderer} = require('electron');
 const {BrowserWindow} = require('electron').remote;
 const {clipboard} = require('electron');
 
-const SERVER_URL = 'https://hackmd.io';
+const SERVER_URL = 'http://materials.ironhack.com';
 
 const isDarwin = os.platform() === 'darwin';
 
@@ -31,7 +31,7 @@ onload = () => {
 		document.querySelector('title').innerHTML = webview.getTitle();
 
 		// set dark theme if in home page
-		if (webview.getURL().split('?')[0].split('#')[0].match(/https:\/\/hackmd.io\/$/)) {
+		if (webview.getURL().split('?')[0].split('#')[0].match(/http:\/\/materials.ironhack.com\/$/)) {
 			document.querySelector('navbar').className = 'dark';
 		} else {
 			document.querySelector('navbar').className = '';
